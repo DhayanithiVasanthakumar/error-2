@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 public class Email {
 	File file = new File(
-			"C:\\Users\\dhaya\\git\\java-projects\\EmailAdministrator\\src\\com\\emailapp\\information.txt");
+			"C:\\Users\\dhaya\\git\\java-Project\\Email App\\src\\com\\project\\emailApp\\information.txt");
 	public Scanner in = new Scanner(System.in);// Scanner class(global)for this class -> it access it in any where in
 												// this class
 	/*

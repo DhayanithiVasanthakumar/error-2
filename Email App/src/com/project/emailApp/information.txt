@@ -1,29 +1,8 @@
 
-Firstname: dhaya
-Lastname: v
-Email: dhaya.v@back-end developer.sat.com
-Password: vktRRCR3
-Capacity: 500
-Alternate email: dhayaaswini004@gmail.com
-******
-Firstname: aswini
-Lastname: v
-Email: aswini.v@front-end developer.sat.com
-Password: cOicKM48
-Capacity: 500
-Alternate email: null
-
-Firstname: naren
-Lastname: d
-Email: naren.d@front-end developer.sat.com
-Password: RCi88@8i
-Capacity: 500
-Alternate email: null
-********
-Firstname: era
-Lastname: rea
-Email: era.rea@back-end developer.sat.com
-Password: sdb
+Firstname: df
+Lastname: dsfb
+Email: df.dsfb@back-end developer.sat.com
+Password: %%A#L8X!
 Capacity: 500
 Alternate email: null
 ********
