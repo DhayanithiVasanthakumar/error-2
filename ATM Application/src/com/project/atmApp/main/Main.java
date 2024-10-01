@@ -3,12 +3,21 @@ package com.project.atmApp.main;
 import java.util.Scanner;
 
 import com.project.atmApp.atm.ATM;
+import com.project.atmApp.operationInterface.ATMOperation;
+import com.project.atmApp.operationInterface.ATMOperationInterface;
 
 public class Main {
 	
 	
 	
 	public static void main(String[]args) {
+		
+		/*
+		 * create object dynamic binding -> interface
+		 */
+		ATMOperationInterface op=new ATMOperation();
+		
+		
 		
 		/*
 		 * inga random password change pani namaku yetha password vacha maari inga setv pananum
@@ -39,7 +48,7 @@ public class Main {
 			
 			
 			while(true) {
-				System.out.println("1.Available Balance\n2.Withdraw Amount\n3.deposit Amount\n4.Mini Statement\n5.Exit from application");
+				System.out.println("1.Available Balance\n2.deposit Amount\n3.Withdraw Amount\n4.Mini Statement\n5.Exit from application");
 				
 				System.out.println("Enter choice: ");
 				
@@ -49,16 +58,20 @@ public class Main {
 				 * try switch case insted of using if else
 				 */
 				if(choice==1) {
-					
+					op.viewBalance();
 				}
 				else if(choice==2) {
-					
+					System.out.println("Enter amount to deposit: ");
+					double depositInput=input.nextDouble();
+					op.depositAmount(depositInput);
 				}
 				else if(choice==3) {
-					
+					System.out.println("Enter amount to withdraw");
+					double withdraw=input.nextDouble();
+					op.withDrawAmount(withdraw); 
 				}
 				else if(choice==4) {
-					
+					op.viewMiniStatement();
 				}
 				else if(choice==5) {
 					System.out.println("Collect your ATM card\n Thankyou for using application");

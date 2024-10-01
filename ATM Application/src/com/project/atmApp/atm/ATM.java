@@ -4,6 +4,7 @@ public class ATM {
 	private double amount;
 	private double withdrawAmount;
 	private double depositAmount;
+	private double balance;
 	
 	/*
 	 * default constructor
@@ -16,6 +17,16 @@ public class ATM {
 	/*
 	 * getter and setter
 	 */
+	
+	public double getBalance() {
+		return balance;
+	}
+	public void setBalance(double balance) {
+		this.balance=balance;
+	}
+	
+	
+	
 	public double getAmount() {
 		return amount;
 	}
