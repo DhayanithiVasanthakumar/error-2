@@ -12,7 +12,7 @@ public interface ATMOperationInterface {
 
 	public void viewMiniStatement();
 
-	public boolean insertCustomerID(ATM atmdetails);
+	public boolean insertCustomerID(int addCusID);
 
 	public boolean deleteCustomerID(int delCusID);
 

@@ -78,18 +78,18 @@ public class ATMOperation implements ATMOperationInterface {
 	}
 
 	@Override
-	public boolean insertCustomerID(ATM addCusomerID) {
+	public boolean insertCustomerID(int addCusomerID) {
 
 		boolean flag = false;
 
 		try {
 			Connection con = DataBaseConnection.createConnection();
 
-			String query = "INSERT INTO atm_detail(customer_id) VALUES(?);";
+			String query = "INSERT INTO transaction_details(cust_id) VALUES(?);";
 
 			PreparedStatement pst = con.prepareStatement(query);
 
-			pst.setInt(1, addCusomerID.getCustomerID());
+			pst.setInt(1, addCusomerID);
 
 			pst.executeUpdate();
 
@@ -111,7 +111,7 @@ public class ATMOperation implements ATMOperationInterface {
 		try {
 			Connection con = DataBaseConnection.createConnection();
 
-			String query = "DELETE FROM atm_detail WHERE customer_id=" + delCusID;
+			String query = "DELETE FROM transaction_details WHERE cust_id= " + delCusID;
 
 			PreparedStatement pst = con.prepareStatement(query);
 

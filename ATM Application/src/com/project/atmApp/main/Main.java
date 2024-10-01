@@ -37,9 +37,8 @@ public class Main {
 
 				System.out.println("Enter customer ID: ");
 				int addCusID = input.nextInt();
-				ATM addAtmobj = new ATM();
-
-				boolean addResult = op.insertCustomerID(addAtmobj);
+				
+				boolean addResult=op.insertCustomerID(addCusID);
 
 				if (addResult) {
 					System.out.println("Record added sucessfully...");
