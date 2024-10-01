@@ -2,7 +2,7 @@ package com.project.atmApp.main;
 
 import java.util.Scanner;
 
-import com.project.atmApp.atm.ATM;
+
 import com.project.atmApp.operationInterface.ATMOperation;
 import com.project.atmApp.operationInterface.ATMOperationInterface;
 
@@ -78,7 +78,26 @@ public class Main {
 				 * try switch case insted of using if else
 				 */
 				if (choice == 1) {
+					
+					
+					
+					
+					
+					
+					
 					op.viewBalance();
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
 				} else if (choice == 2) {
 					System.out.println("Enter amount to deposit: ");
 					double depositInput = input.nextDouble();

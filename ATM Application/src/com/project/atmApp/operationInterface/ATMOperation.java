@@ -1,7 +1,7 @@
 package com.project.atmApp.operationInterface;
 
 import java.sql.Connection;
-
+import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.util.HashMap;
 import java.util.Map;
@@ -24,12 +24,47 @@ public class ATMOperation implements ATMOperationInterface {
 	// for mini statement
 	Map<Double, String> ministmt = new HashMap<>();
 
+	
+	
 	@Override
-	public void viewBalance() {
-		System.out.println("Available balance: " + atmobj.getBalance());
+	public boolean viewBalance() {
+		System.out.println("Available balance: " +atmobj.getBalance() );
+		int storeBalance=(int) atmobj.getBalance();
+		
+		boolean flag = false;
+		
+		try {
+			Connection con= DataBaseConnection.createConnection();
+			String query="INSERT INTO transaction_details(cust_balance) VALUES(?);";
+			PreparedStatement pst=con.prepareStatement(query);
+			pst.setInt(1, storeBalance);
+			pst.executeUpdate();
+			
+			System.out.println("Balance Stored sucessfully");
+			
+			flag =true;
+			
+			
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return flag;
 
 	}
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	@Override
 	public void withDrawAmount(double withDrawAmount) {
 
@@ -41,7 +76,7 @@ public class ATMOperation implements ATMOperationInterface {
 				ministmt.put(withDrawAmount, "Amount withdrawn");
 
 				// to check balance
-				atmobj.setBalance(atmobj.getBalance() - withDrawAmount);
+				atmobj.setBalance((int) (atmobj.getBalance() - withDrawAmount));
 				viewBalance();
 			} else {
 				System.out.println("Insuffuint balance");
@@ -62,7 +97,7 @@ public class ATMOperation implements ATMOperationInterface {
 
 		// atmobj.getBalance() -> already irukara amount + depositAmount -> current
 		// amount.
-		atmobj.setBalance(atmobj.getBalance() + depositAmount);
+		atmobj.setBalance((int) (atmobj.getBalance() + depositAmount));
 
 		viewBalance();
 
