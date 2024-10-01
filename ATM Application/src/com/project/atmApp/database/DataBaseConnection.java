@@ -6,22 +6,22 @@ import java.sql.SQLException;
 
 public class DataBaseConnection {
 
-	private static final String url = "jdbc:postgresql://localhost:5432/ATMApplication";
+	private static final String url = "jdbc:postgresql://localhost:5432/ATM Application";
 	private static final String user = "postgres";
 	private static final String pass = "root";
-	
+
 	static Connection con;
-	
-	public static Connection setDBConnection() {
-		
+
+	public static Connection createConnection() {
+
 		try {
 			Class.forName("org.postgresql.Driver");
-			con=DriverManager.getConnection(url,user,pass);
+			con = DriverManager.getConnection(url, user, pass);
 		} catch (ClassNotFoundException | SQLException e) {
 			e.printStackTrace();
 		}
-		
+
 		return con;
-		
+
 	}
 }
