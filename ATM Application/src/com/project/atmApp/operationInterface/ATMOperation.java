@@ -2,11 +2,13 @@ package com.project.atmApp.operationInterface;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 import com.project.atmApp.atm.ATM;
 
 public class ATMOperation implements ATMOperationInterface{
 
+	Scanner input=new Scanner(System.in); 
 	
 	 
 	
@@ -19,6 +21,19 @@ public class ATMOperation implements ATMOperationInterface{
 	
 	//for mini statement
 	Map<Double,String> ministmt=new HashMap<>();
+	
+	
+
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
 	
 	@Override
 	public void viewBalance() {
@@ -81,5 +96,11 @@ public class ATMOperation implements ATMOperationInterface{
 		}
 		
 	}
+
+	
+
+
+
+
 
 }

@@ -1,6 +1,9 @@
 package com.project.atmApp.atm;
 
+
 public class ATM {
+	
+	
 	private double amount;
 	private double withdrawAmount;
 	private double depositAmount;
@@ -17,6 +20,10 @@ public class ATM {
 	/*
 	 * getter and setter
 	 */
+	
+	
+	
+	
 	
 	public double getBalance() {
 		return balance;

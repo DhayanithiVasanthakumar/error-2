@@ -25,6 +25,15 @@ public class Main {
 		 *refer EmailApp class in EmailAdministrator project.
 		 */
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		int atmNum=12345;
 		int pin=123;
 		
@@ -45,6 +54,17 @@ public class Main {
 		
 		
 		if((atmNumber==atmNum)&&(atmPin==pin)) {
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 			
 			
 			while(true) {
@@ -73,6 +93,7 @@ public class Main {
 				else if(choice==4) {
 					op.viewMiniStatement();
 				}
+				
 				else if(choice==5) {
 					System.out.println("Collect your ATM card\n Thankyou for using application");
 					System.exit(0);
