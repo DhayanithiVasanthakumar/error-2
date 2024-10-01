@@ -5,6 +5,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
+import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -18,7 +19,6 @@ public class Email {
 	 * directly.
 	 */
 	private String firstname;
-	
 	private String lastname;
 	private String password;
 	private String email;
@@ -164,10 +164,13 @@ public class Email {
 	// set mailBoxCapacity method -> it is user activity so it is in public.
 	// user will access it.
 	public void setMailBoxCapacity() {
-		System.out.println("Current mail box capacity :" + this.mailcapacity + "mb");
-		System.out.println("Enter new mail boc capacity :");
-		this.mailcapacity = in.nextInt();
-		System.out.println("Mail box capacity sucessfully updated");
+	
+			System.out.println("Current mail box capacity :" + this.mailcapacity + "mb");
+			System.out.println("Enter new mail boc capacity :");
+			this.mailcapacity = in.nextInt();
+			System.out.println("Mail box capacity sucessfully updated");
+		
+		
 	}
 
 	// set alternate mail method ->it is user activity so it is in public.
