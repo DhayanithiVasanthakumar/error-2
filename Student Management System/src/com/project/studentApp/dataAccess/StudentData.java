@@ -33,7 +33,7 @@ public class StudentData implements StudentDataInterface{
 			pst.setString(4, studentDetails.getCityName());
 			pst.setDouble(5, studentDetails.getPercentage());
 			
-
+			pst.executeUpdate();
 			
 			// if record inserted sucessfully,then the flag will become true,
 			//and in (result flag) become true ah irukarathu naala ithu 
