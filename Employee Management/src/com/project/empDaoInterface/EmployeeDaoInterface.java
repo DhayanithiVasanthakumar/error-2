@@ -12,8 +12,12 @@ public interface EmployeeDaoInterface {
 	//user kitta iruntu input vangarom so parameter la variable set pananu
 	public void showAllEmployeeBasedOnId(int id);
 	
-	//update employee
+	//update employee name
 	public void updateEmployee(int id,String name);
+	
+	//update employee salary
+	//update employee age
+	//both 2 are as same as updateEmployee
 	
 	//delete employee
 	public void deleteEmployee(int id);

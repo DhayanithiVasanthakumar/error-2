@@ -10,6 +10,12 @@ public class Main {
 
 	public static void main(String[] args) {
 		
+		String name;
+		int id;
+		double salary;
+		int age;
+		
+		
 		/*
 		 * for access methods
 		 */
@@ -33,16 +39,16 @@ public class Main {
 				Employee emp=new Employee();
 				
 				System.out.println("Enter ID: ");
-				int id=in.nextInt();
+				id=in.nextInt();
 				
 				System.out.println("Enter Name: ");
-				String name=in.next();
+				 name=in.next();
 				
 				System.out.println("Enter salary: ");
-				double salary=in.nextDouble();
+				 salary=in.nextDouble();
 				
 				System.out.println("Enter Age: ");
-				int age=in.nextInt();
+				 age=in.nextInt();
 				
 				/*
 				 * input ah vanganathu alla Employee class la obj muliyam ah antha method la irukara 
@@ -60,11 +66,16 @@ public class Main {
 				break;
 			case 3:
 				System.out.println("Enter employee id: ");
-				int empid=in.nextInt();
-				dao.showAllEmployeeBasedOnId(empid);
+				 id=in.nextInt();
+				dao.showAllEmployeeBasedOnId(id);
 				break;
 			case 4:
+				System.out.println("Enter Employee ID to update: ");
+				id=in.nextInt();
 				
+				System.out.println("Enter new Name: ");
+				name=in.next();
+				dao.updateEmployee(id, name);
 				break;
 			case 5:
 				
