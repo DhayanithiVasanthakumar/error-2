@@ -1,9 +1,11 @@
 package com.project.empDaoInterface;
 
+import com.project.employeeApp.Employee;
+
 public interface EmployeeDaoInterface {
 	
 	//create employee
-	public void createEmployee();
+	public void createEmployee(Employee emp);
 	//show all employee
 	public void showAllEmployee();
 	//show employee based on id

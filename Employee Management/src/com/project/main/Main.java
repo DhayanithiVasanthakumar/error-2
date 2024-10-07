@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import com.project.empDao.EmployeeDao;
 import com.project.empDaoInterface.EmployeeDaoInterface;
+import com.project.employeeApp.Employee;
 
 public class Main {
 
@@ -17,6 +18,9 @@ public class Main {
 	
 		
 		System.out.println("Employee Management System");
+		
+		System.out.println("Enter your Choice: ");
+		System.out.println(" ");
 		Scanner in=new Scanner(System.in);
 		
 		do {
@@ -26,7 +30,29 @@ public class Main {
 			
 			switch(choice) {
 			case 1:
-				dao.createEmployee();
+				Employee emp=new Employee();
+				
+				System.out.println("Enter ID: ");
+				int id=in.nextInt();
+				
+				System.out.println("Enter Name: ");
+				String name=in.next();
+				
+				System.out.println("Enter salary: ");
+				double salary=in.nextDouble();
+				
+				System.out.println("Enter Age: ");
+				int age=in.nextInt();
+				
+				/*
+				 * input ah vanganathu alla Employee class la obj muliyam ah set pananrom.
+				 */
+				emp.setID(id);
+				emp.setName(name);
+				emp.setSalary(salary);
+				emp.setAge(age);
+				
+				dao.createEmployee(emp);
 				break;
 			case 2:
 				
