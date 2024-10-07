@@ -2,7 +2,9 @@ package com.project.empDao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 import com.project.DBConnection.DataBaseConnection;
 import com.project.empDaoInterface.EmployeeDaoInterface;
@@ -38,7 +40,36 @@ public class EmployeeDao implements EmployeeDaoInterface{
 
 	@Override
 	public void showAllEmployee() {
+		con=DataBaseConnection.createDBConnection();
+		String query="SELECT * FROM emp_details;";
 		
+		System.out.println("Employee Details:");
+		System.out.println("--------------------------------------------------------");
+		
+		System.out.format("%s\t%s\t%s\t\t%s\n","ID","NAME","SALARY","AGE");
+		System.out.println("--------------------------------------------------------");
+		
+		try {
+			Statement st=con.createStatement();
+			ResultSet rs=st.executeQuery(query);
+			
+			while(rs.next()) {
+				/*
+				 * %d -> for int
+				 * %s -> for String
+				 * %f -> for double
+				 */
+				System.out.format("%d\t%s\t%f\t%d\n",
+						rs.getInt(1),
+						rs.getString(2),
+						rs.getDouble(3),
+						rs.getInt(4)
+						);
+				System.out.println("--------------------------------------------------------");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 		
 	}
 

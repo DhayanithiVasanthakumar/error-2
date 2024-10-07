@@ -45,7 +45,8 @@ public class Main {
 				int age=in.nextInt();
 				
 				/*
-				 * input ah vanganathu alla Employee class la obj muliyam ah set pananrom.
+				 * input ah vanganathu alla Employee class la obj muliyam ah antha method la irukara 
+				 * parameter la set pananrom.
 				 */
 				emp.setID(id);
 				emp.setName(name);
@@ -55,7 +56,7 @@ public class Main {
 				dao.createEmployee(emp);
 				break;
 			case 2:
-				
+				dao.showAllEmployee();
 				break;
 			case 3:
 				
