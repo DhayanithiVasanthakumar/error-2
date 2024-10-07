@@ -141,6 +141,23 @@ public class EmployeeDao implements EmployeeDaoInterface{
 
 	@Override
 	public void deleteEmployee(int id) {
+		con=DataBaseConnection.createDBConnection();
+		
+		String query="DELETE FROM emp_details WHERE emp_id=?";
+		
+		try {
+			PreparedStatement pst=con.prepareStatement(query);
+			
+			pst.setInt(1, id);
+			
+			int count=pst.executeUpdate();
+			
+			if(count!=0) {
+				System.out.println("Employee deleted sucessfully!!!  "+id);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 		
 		
 	}

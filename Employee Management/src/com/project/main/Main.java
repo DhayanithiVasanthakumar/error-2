@@ -78,12 +78,22 @@ public class Main {
 				dao.updateEmployee(id, name);
 				break;
 			case 5:
-				
+				System.out.println("Enter employee id to delete: ");
+				id=in.nextInt();
+				dao.deleteEmployee(id);
 				break;
 			case 6:
 				System.out.println("Thankyou for using application...");
 				System.exit(0);
 				break;
+				
+				
+				
+				/*
+				 * write a method (File operation)
+				 * to export the details stored in DB to some file 
+				 * to import the details stored in DB to some file
+				 */
 			default:
 				System.out.println("please enter valid choice!");
 			}
