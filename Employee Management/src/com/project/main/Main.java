@@ -59,7 +59,9 @@ public class Main {
 				dao.showAllEmployee();
 				break;
 			case 3:
-				
+				System.out.println("Enter employee id: ");
+				int empid=in.nextInt();
+				dao.showAllEmployeeBasedOnId(empid);
 				break;
 			case 4:
 				
