@@ -8,6 +8,7 @@ import com.project.emailLogic.Email;
 public class EmailApp {
 	public static void main(String[] args) {
 
+		
 		Scanner in = new Scanner(System.in);
 		// user information
 		System.out.println("Enter firstname: ");
