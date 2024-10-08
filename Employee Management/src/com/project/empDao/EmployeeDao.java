@@ -44,10 +44,10 @@ public class EmployeeDao implements EmployeeDaoInterface{
 		String query="SELECT * FROM emp_details;";
 		
 		System.out.println("Employee Details:");
-		System.out.println("--------------------------------------------------------");
+		System.out.println("---------------------------------------------------------------------------");
 		
-		System.out.format("%s\t%s\t\t%s\t\t%s\n","ID","NAME","SALARY","AGE");
-		System.out.println("--------------------------------------------------------");
+		System.out.format("%s\t%s\t\t\t%s\t\t\t%s\n","ID","NAME","SALARY","AGE");
+		System.out.println("---------------------------------------------------------------------------");
 		
 		try {
 			Statement st=con.createStatement();
@@ -59,13 +59,13 @@ public class EmployeeDao implements EmployeeDaoInterface{
 				 * %s -> for String
 				 * %f -> for double
 				 */
-				System.out.format("%d\t%s\t\t%f\t%d\n",
+				System.out.format("%d\t%s\t\t\t%f\t\t%d\n",
 						rs.getInt(1),
 						rs.getString(2),
 						rs.getDouble(3),
 						rs.getInt(4)
 						);
-				System.out.println("--------------------------------------------------------");
+				System.out.println("---------------------------------------------------------------------------");
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
